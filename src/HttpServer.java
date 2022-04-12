@@ -8,28 +8,26 @@ public class HttpServer {
     public static void main(String[] args) throws IOException{
         int port = 8080; // server port
         int clientId = 0;
-        ServerSocket serverSocket = new ServerSocket(port); // create server socket
 
         // create thread pool
         ExecutorService exec = Executors.newCachedThreadPool();
 
-        // server
-        System.out.printf("Server start with listening port %d. Press Ctrl + C to quit.\n",port);
-        try{
-            while (true){
-                Socket socket = serverSocket.accept(); // wait for new client
+        // create server and as server
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
+            System.out.printf("Server start with listening port %d. Press Ctrl + C to quit.\n", port);
+            while (true) {
+                Socket socket = serverSocket.accept(); // wait for new client and accept
                 exec.execute(new Worker(socket, ++clientId));
             }
-        }finally {
-            serverSocket.close();
+        } finally {
             System.out.println("Server stop running!");
         }
     }
 }
 
 class Worker implements Runnable{
-    private Socket socket;
-    private int clientId;
+    private final Socket socket;
+    private final int clientId;
     public Worker(Socket socket, int clientId){
         this.socket = socket;
         this.clientId = clientId;
@@ -40,6 +38,8 @@ class Worker implements Runnable{
         try {
             DataInputStream dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
             DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+
+
 
         }catch (IOException e){
             e.printStackTrace();
