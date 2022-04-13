@@ -49,6 +49,7 @@ public class Response {
                         responseInfo.println("Content-type: " + getContentType(file.getName()));
                         responseInfo.println("Content-length: " + fileLength);
                         responseInfo.println("Last-Modified: " + lastModTime(file));
+                        responseInfo.println("Connection: " + "keep-alive");
                         responseInfo.println("Expires: " + new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 14)));
                         responseInfo.println();
                         responseInfo.flush();
