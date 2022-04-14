@@ -145,7 +145,7 @@ public class Response {
 
     // MIME type
     private String getContentType(String fileRequested) {
-        if (fileRequested.endsWith(".html"))
+        if (fileRequested.endsWith(".html") || fileRequested.endsWith(".htm"))
             return "text/html";
         else if (fileRequested.endsWith(".jpg") || fileRequested.endsWith(".jpeg")){
             return "image/jpeg";
