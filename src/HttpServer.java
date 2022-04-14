@@ -15,7 +15,6 @@ public class HttpServer {
 
         // create thread pool for timer exec
         ExecutorService workerExec = Executors.newCachedThreadPool();
-        ExecutorService timerExec = Executors.newCachedThreadPool();
 
         // create server and as server
         int clientID = 0;
@@ -30,7 +29,7 @@ public class HttpServer {
             }
         } finally {
             System.out.println("Server stop running!");
-            timerExec.shutdown();
+            workerExec.shutdown();
         }
     }
 }
@@ -95,31 +94,5 @@ class Worker implements Runnable{
             requestInfo.append((char) buffer[i]);
         }
         return requestInfo.toString();
-    }
-}
-
-class Clock implements Runnable{
-    private final int millisecond;
-    private final Socket socket;
-
-    public void run(){
-        try {
-            while (true){
-                Thread.sleep(millisecond);
-                if (!socket.isConnected()){
-                    socket.close();
-                    break;
-                }else {
-                    Thread.sleep(millisecond);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public Clock(Socket socket, int millisecond){
-        this.millisecond = millisecond;
-        this.socket = socket;
     }
 }
