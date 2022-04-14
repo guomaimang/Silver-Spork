@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -8,10 +9,12 @@ public class HttpServer {
 
     public static final String serverRoot = System.getProperty("user.dir") + "/public"; // Static file root
     public static final int port = 8082;              // server port
+    public static Logger logger =  new Logger(System.getProperty("user.dir") + "/log.txt");
 
     public static void main(String[] args) throws IOException{
 
         // create thread pool for timer exec
+        ExecutorService workerExec = Executors.newCachedThreadPool();
         ExecutorService timerExec = Executors.newCachedThreadPool();
 
         // create server and as server
@@ -22,11 +25,8 @@ public class HttpServer {
             while (true) {
                 Socket socket = serverSocket.accept(); // wait for new client and accept
                 socket.setKeepAlive(true);
-                Worker worker = new Worker(socket, ++clientID);
-                Thread wt = new Thread(worker);
-                wt.start();
-                Clock clock = new Clock(wt,socket,10000);
-                timerExec.execute(clock);
+                socket.setSoTimeout(10000);
+                workerExec.execute(new Worker(socket, ++clientID,logger));
             }
         } finally {
             System.out.println("Server stop running!");
@@ -39,24 +39,27 @@ class Worker implements Runnable{
     private final Socket socket;
     private final int serverTimes;
     private final String clientIP;
+    private final Logger logger;
 
-    public Worker(Socket socket, int serverTimes){
+    public Worker(Socket socket, int serverTimes,Logger logger){
         this.socket = socket;
         this.serverTimes = serverTimes;
         this.clientIP = socket.getRemoteSocketAddress().toString();
+        this.logger = logger;
     }
 
     @Override
     public void run(){
+        System.out.printf("Socket: %d,\tDate: %s, IP: %s, comes in.\n",serverTimes,new Date(),clientIP);
+        logger.add(String.format("Socket: %d,\tDate: %s, IP: %s, comes in.\n",serverTimes,new Date(),clientIP));
         try {
             while (true){
 
-                // set IO
-                DataInputStream dis = new DataInputStream(
-                        new BufferedInputStream(socket.getInputStream()));
-
-                DataOutputStream dos = new DataOutputStream(
-                        new BufferedOutputStream(socket.getOutputStream()));
+                DataInputStream dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+                DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+                if (socket.isClosed()){
+                    break;
+                }
 
                 // process request and response
                 Request request = new Request(parse(dis));
@@ -65,34 +68,29 @@ class Worker implements Runnable{
 
                 // dos flush
                 dos.flush();
-                System.out.printf("Socket: %d,\tIP: %s,\tType: %s,\tUrl: %s,\tServer response: %d\n",serverTimes,clientIP,request.getType(),request.getUrl(),response.status);
-
+                System.out.printf("Socket: %d,\tDate: %s, IP: %s, Type: %s,\tUrl: %s,\tServer response: %d\n",serverTimes,new Date(),clientIP,request.getType(),request.getUrl(),response.status);
+                logger.add(String.format("Socket: %d,\tDate: %s, IP: %s, Type: %s,\tUrl: %s,\tServer response: %d\n",serverTimes,new Date(),clientIP,request.getType(),request.getUrl(),response.status));
             }
-
         }
         catch (Exception e){
-            e.printStackTrace();
         }finally {
             try {
                 socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+            }finally {
+                System.out.printf("Socket: %d,\tDate: %s,\tIP: %s, close connection.\n",serverTimes,new Date(),clientIP);
+                logger.add(String.format("Socket: %d,\tDate: %s,\tIP: %s, close connection.\n",serverTimes,new Date(),clientIP));
             }
         }
     }
 
-    public String parse(InputStream dis){
+    public String parse(DataInputStream dis) throws IOException{
         // read info from socket
         StringBuilder requestInfo = new StringBuilder(4096);
         byte[] buffer = new byte[4096];
 
         // parse to string
-        int infoLength = -1;
-        try {
-            infoLength = dis.read(buffer);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        int infoLength = dis.read(buffer);
         for (int i = 0; i < infoLength; i++) {
             requestInfo.append((char) buffer[i]);
         }
@@ -101,22 +99,27 @@ class Worker implements Runnable{
 }
 
 class Clock implements Runnable{
-    private final Thread thread;
     private final int millisecond;
     private final Socket socket;
 
     public void run(){
         try {
-            Thread.sleep(millisecond);
-            thread.stop();
+            while (true){
+                Thread.sleep(millisecond);
+                if (!socket.isConnected()){
+                    socket.close();
+                    break;
+                }else {
+                    Thread.sleep(millisecond);
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public Clock(Thread thread, Socket socket, int millisecond){
+    public Clock(Socket socket, int millisecond){
         this.millisecond = millisecond;
-        this.thread = thread;
         this.socket = socket;
     }
 }

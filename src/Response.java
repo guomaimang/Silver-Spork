@@ -49,7 +49,8 @@ public class Response {
                         responseInfo.println("Content-type: " + getContentType(file.getName()));
                         responseInfo.println("Content-length: " + fileLength);
                         responseInfo.println("Last-Modified: " + lastModTime(file));
-                        responseInfo.println("Connection: " + "keep-alive");
+                        responseInfo.println("Connection: keep-alive");
+                        responseInfo.println("Keep-Alive: timeout=10, max=1000");
                         responseInfo.println("Expires: " + new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 14)));
                         responseInfo.println();
                         responseInfo.flush();
@@ -82,6 +83,7 @@ public class Response {
         responseInfo.println("Server: Silver Spork by Hanjiaming");
         responseInfo.println("Date: " + new Date());
         responseInfo.println("Last-Modified: " + request.getLastModSince());
+        responseInfo.println("Keep-Alive: timeout=10, max=1000");
         responseInfo.println("Expires: " + new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 14)));
         responseInfo.println();
         responseInfo.flush();
@@ -102,6 +104,7 @@ public class Response {
             responseInfo.println("Date: " + new Date());
             responseInfo.println("Content-type: " + getContentType(file.getName()));
             responseInfo.println("Content-length: " + fileLength);
+            responseInfo.println("Keep-Alive: timeout=10, max=1000");
             responseInfo.println();
             responseInfo.flush();
 
@@ -127,6 +130,7 @@ public class Response {
             PrintWriter responseInfo = new PrintWriter(outputStream);
             responseInfo.println("HTTP/1.1 400 Bad Request");
             responseInfo.println("Server: Silver Spork by Hanjiaming");
+            responseInfo.println("Keep-Alive: timeout=10, max=1000");
             responseInfo.println("Content-type: text/html");
             responseInfo.println();
             responseInfo.flush();
