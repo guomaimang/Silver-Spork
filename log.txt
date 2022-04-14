@@ -28,3 +28,19 @@ Socket: 8,	Date: Thu Apr 14 23:51:46 CST 2022, IP: /[0:0:0:0:0:0:0:1]:56528, Typ
 Socket: 9,	Date: Thu Apr 14 23:51:46 CST 2022, IP: /[0:0:0:0:0:0:0:1]:56529, Type: POST,	Url: /demo.png,	Server response: 400
 Socket: 8,	Date: Thu Apr 14 23:51:46 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:56528, close connection.
 Socket: 9,	Date: Thu Apr 14 23:51:56 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:56529, close connection.
+-------------------
+Socket: 1,	Date: Thu Apr 14 23:59:34 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58490, comes in.
+Socket: 2,	Date: Thu Apr 14 23:59:34 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58491, comes in.
+Socket: 2,	Date: Thu Apr 14 23:59:34 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58491, Type: POST,	Url: /demo.png,	Server response: 400
+Socket: 1,	Date: Thu Apr 14 23:59:34 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58490, Type: null,	Url: null,	Server response: 400
+Socket: 1,	Date: Thu Apr 14 23:59:34 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:58490, close connection.
+Socket: 2,	Date: Thu Apr 14 23:59:44 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:58491, close connection.
+Socket: 3,	Date: Fri Apr 15 00:00:32 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58727, comes in.
+Socket: 4,	Date: Fri Apr 15 00:00:32 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, comes in.
+Socket: 3,	Date: Fri Apr 15 00:00:32 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58727, Type: null,	Url: null,	Server response: 400
+Socket: 3,	Date: Fri Apr 15 00:00:32 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:58727, close connection.
+Socket: 4,	Date: Fri Apr 15 00:00:32 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Type: GET,	Url: /,	Server response: 200
+Socket: 4,	Date: Fri Apr 15 00:00:33 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Type: GET,	Url: /,	Server response: 200
+Socket: 4,	Date: Fri Apr 15 00:00:36 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Type: GET,	Url: /,	Server response: 200
+Socket: 4,	Date: Fri Apr 15 00:00:46 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Type: POST,	Url: /,	Server response: 400
+Socket: 4,	Date: Fri Apr 15 00:00:56 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:58728, close connection.
