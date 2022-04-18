@@ -3,7 +3,9 @@ import java.util.Date;
 
 /**
  * @author Han Jiaming
- * Only supports GET of HTTP/1.1
+ * Only supports GET or HEAD of HTTP/1.1
+ * For usage, reference and more info, please visit https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming
+ * Or check the project report
  */
 
 public class Response {
@@ -28,7 +30,7 @@ public class Response {
                 return;
             }
 
-            if (request.getType().equals("GET")){
+            if (request.getType().equals("GET") || request.getType().equals("HEAD")){
 
                 // get file from website root
                 if (request.getUrl().equals("/")){
@@ -37,6 +39,7 @@ public class Response {
                     file = new File(HttpServer.serverRoot,request.getUrl());
                 }
 
+                // Response 200
                 if (file.exists()){
                     if (request.getLastModSince() != null && request.getLastModSince().equals(lastModTime(file))){
                         response304();
@@ -54,17 +57,20 @@ public class Response {
                         responseInfo.println("Expires: " + new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 14)));
                         responseInfo.println();
                         responseInfo.flush();
-                        // read file as byte and write file into dos as file.
+                        status = 200;
+                    }
+                    // read file as byte and write file into dos as file.
+                    if (request.getType().equals("GET")){
                         fis = new FileInputStream(file);
                         int s;
                         while ((s = fis.read(buf))!=-1){
                             outputStream.write(buf,0,s);
                         }
-                        status = 200;
                     }
                 }else {
                     response404();
                 }
+
             }else {
                 response400();
             }

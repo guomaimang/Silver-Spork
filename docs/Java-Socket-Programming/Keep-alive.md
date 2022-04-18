@@ -64,10 +64,6 @@ socket.setSoTimeout(10000);  // millisecond
   }
 ```
 
-## Tag: Expired
-
-设定client cache过期时间。Server 默认指定为 14天后。
-
 ## Reference
 
 - https://docs.oracle.com/javase/8/docs/technotes/guides/net/http-keepalive.html

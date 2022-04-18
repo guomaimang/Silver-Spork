@@ -38,6 +38,10 @@ Server address: localhost:8082
 
 ![1649951656250.png](https://pic.hanjiaming.com.cn/2022/04/14/62557f5b1de9d.png)
 
+### HEAD /logo.png
+
+![CleanShot 2022-04-18 at 13.49.58@2x.png](https://pic.hanjiaming.com.cn/2022/04/18/cb045464dd447.png)
+
 ## Log file
 
-![1649951856199.png](https://pic.hanjiaming.com.cn/2022/04/14/e6ad5c204f0b3.png)
+![1650261667772.png](https://pic.hanjiaming.com.cn/2022/04/18/0a98385cc44c2.png)

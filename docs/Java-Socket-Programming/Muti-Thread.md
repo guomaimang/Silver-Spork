@@ -9,7 +9,7 @@ index: 1
 
 Java 使用多线程而不是多进程。
 
-多线程中，最难处理的是IO。Silver Spork 需要将日志写入到文件中，所以需要加锁。由于存在使用stop终止线程，这部分需要格外小心。防止出现死锁。
+多线程中，最难处理的是IO。
 
 ## 实现
 
@@ -17,7 +17,7 @@ Java 使用多线程而不是多进程。
 
 程序使用Java 线程池创建多线程，而不是使用传统的方式。这样有利于后期管理线程。
 
-实质上是多个socket并存，程序需要保持和客户端的通信。Silver Spork让每个子线程处理每个socket。当socket 过期后，子线程将被终止。
+实质上是多个socket并存，程序需要保持和客户端的通信。Silver Spork让每个子线程处理每个socket。当socket 过期后，子线程将被interrupt。
 
 ```java
 // create thread pool for timer exec

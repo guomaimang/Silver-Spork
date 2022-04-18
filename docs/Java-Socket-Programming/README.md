@@ -15,18 +15,24 @@ index: 0
 ### Requirement
 
 - 使用Java, 开发一个套接字程序 **Silver Spork**, 设计一个轻量的HTTP Server, 以实现使用HTTP协议的WEB服务, 功能类似Nginx。
-- 使用Java Muti-Thread(多线程) 
--  Specifically, your Web server will 
-  - create a connectionsocket when contacted by a client (browser);
-  - receive the HTTP requestfrom this connection;
-  - parse the request to determine the specific file beingrequested;
-  - get the requested filefrom the server’s file system;
-  - create anHTTP response message consisting of the requested file preceded by header lines;
+- Specifically, your Web server will 
+  - 使用Java Muti-Thread(多线程) 
+  - Create a connectionsocket when contacted by a client (browser);
+  - Receive the HTTP request from this connection;
+  - Parse the request to determine the specific file being requested;
+  - Get the requested file from the server’s file system;
+  - Proper requestand responsemessage exchanges 
+  - Create an HTTP response message consisting of the requested file preceded by header lines;
   - Can't use the HTTPServer class directly
-- 只需要处理GET
-- 只能回应HTTP1.1 下的 200, 400, 404, 304
-- Handle Last-Modified and If-Modified-Since headerfields
-- Handle Connection: Keep-Aliveheader field
+  - 只需要处理GET 和 HEAD
+  - 只能回应HTTP1.1 下的 200, 400, 404, 304
+  - Handle Last-Modified and If-Modified-Since headerfields
+  - Handle Connection: Keep-Aliveheader field
+
+- A good summary.
+- A clear README text file
+- High quality.
+- A full demonstration.
 
 ### Environment
 
@@ -63,9 +69,6 @@ index: 0
   - Default is 8080
 - logger: set the location of log file
   - Default is "log.txt"
-
-
-多线程中，最难处理的是IO。Silver Spork 需要将日志写入到文件中，所以需要加锁。由于存在使用stop终止线程，这部分需要格外小心。防止出现死锁。
 
 ## Advantage
 

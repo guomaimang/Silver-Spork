@@ -24,6 +24,10 @@ return dt.toString();
 
 <img src="https://pic.hanjiaming.com.cn/2022/04/14/e160a548909a2.png" alt="1649939333143.png" style="zoom:50%;" />
 
+## Tag: Expired
+
+设定client cache过期时间。Server 默认指定为 14天后。
+
 ## Reference
 
 - https://blog.csdn.net/lhl1124281072/article/details/80067764

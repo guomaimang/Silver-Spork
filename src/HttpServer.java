@@ -5,6 +5,13 @@ import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * @author Han Jiaming
+ * Only supports GET or HEAD of HTTP/1.1
+ * For usage, reference and more info, please visit https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming
+ * Or check the project report
+ */
+
 public class HttpServer {
 
     public static final String serverRoot = System.getProperty("user.dir") + "/public"; // Static file root
@@ -93,7 +100,6 @@ class Worker implements Runnable{
         for (int i = 0; i < infoLength; i++) {
             requestInfo.append((char) buffer[i]);
         }
-        System.out.println(requestInfo);
         return requestInfo.toString();
     }
 }

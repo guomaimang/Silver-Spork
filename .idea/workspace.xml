@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c403552-5439-4cc5-9354-e66556d03372" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/Java-Socket-Programming/Report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Java-Socket-Programming/Demo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Java-Socket-Programming/Demo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Java-Socket-Programming/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Java-Socket-Programming/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Java-Socket-Programming/Response.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Java-Socket-Programming/Response.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Response.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +169,7 @@
       <workItem from="1649745256976" duration="32144000" />
       <workItem from="1649829499846" duration="30927000" />
       <workItem from="1649933888929" duration="10605000" />
-      <workItem from="1650259548239" duration="753000" />
+      <workItem from="1650259548239" duration="2657000" />
     </task>
     <servers />
   </component>
