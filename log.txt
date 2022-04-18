@@ -44,3 +44,19 @@ Socket: 4,	Date: Fri Apr 15 00:00:33 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Typ
 Socket: 4,	Date: Fri Apr 15 00:00:36 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Type: GET,	Url: /,	Server response: 200
 Socket: 4,	Date: Fri Apr 15 00:00:46 CST 2022, IP: /[0:0:0:0:0:0:0:1]:58728, Type: POST,	Url: /,	Server response: 400
 Socket: 4,	Date: Fri Apr 15 00:00:56 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:58728, close connection.
+-------------------
+Socket: 1,	Date: Mon Apr 18 13:30:09 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60015, comes in.
+Socket: 2,	Date: Mon Apr 18 13:30:09 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60016, comes in.
+Socket: 1,	Date: Mon Apr 18 13:30:09 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60015, Type: null,	Url: null,	Server response: 400
+Socket: 2,	Date: Mon Apr 18 13:30:09 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60016, Type: HEAD,	Url: /,	Server response: 400
+Socket: 1,	Date: Mon Apr 18 13:30:09 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:60015, close connection.
+Socket: 2,	Date: Mon Apr 18 13:30:09 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60016, Type: null,	Url: null,	Server response: 400
+Socket: 2,	Date: Mon Apr 18 13:30:09 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:60016, close connection.
+-------------------
+Socket: 1,	Date: Mon Apr 18 13:32:26 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60185, comes in.
+Socket: 2,	Date: Mon Apr 18 13:32:26 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60186, comes in.
+Socket: 1,	Date: Mon Apr 18 13:32:26 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60185, Type: null,	Url: null,	Server response: 400
+Socket: 2,	Date: Mon Apr 18 13:32:26 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60186, Type: HEAD,	Url: /,	Server response: 400
+Socket: 1,	Date: Mon Apr 18 13:32:26 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:60185, close connection.
+Socket: 2,	Date: Mon Apr 18 13:32:26 CST 2022, IP: /[0:0:0:0:0:0:0:1]:60186, Type: null,	Url: null,	Server response: 400
+Socket: 2,	Date: Mon Apr 18 13:32:26 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:60186, close connection.

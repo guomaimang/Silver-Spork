@@ -93,6 +93,7 @@ class Worker implements Runnable{
         for (int i = 0; i < infoLength; i++) {
             requestInfo.append((char) buffer[i]);
         }
+        System.out.println(requestInfo);
         return requestInfo.toString();
     }
 }

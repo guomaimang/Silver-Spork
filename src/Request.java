@@ -1,5 +1,8 @@
 import java.util.Objects;
-
+/**
+ * @author Hann Jiaming
+ * For usage and more info, please visit guomaimang.github.io/note/cs/cn/
+ */
 public class Request{
     private final boolean legal;
     private String type;
@@ -10,11 +13,16 @@ public class Request{
 
         // parse info to http attributes
         String[] requestInfoArr = requestInfo.split("\\s+");
-        if (requestInfoArr.length >= 9){
+        // parse legal type url
+        if (requestInfoArr.length >= 3){
             legal = true;
             type = requestInfoArr[0];
             url = requestInfoArr[1];
-
+        }else {
+            legal = false;
+        }
+        // parse last mod
+        if (requestInfoArr.length >= 9){
             for (int i = 0; i < requestInfoArr.length; i++) {
                 if (Objects.equals(requestInfoArr[i], "If-Modified-Since:") && i+6 < requestInfoArr.length){
                     lastModSince = requestInfoArr[i+1] + " " + requestInfoArr[i+2] + " " + requestInfoArr[i+3] + " " +
@@ -22,8 +30,6 @@ public class Request{
                     break;
                 }
             }
-        }else {
-            legal = false;
         }
 
     }
