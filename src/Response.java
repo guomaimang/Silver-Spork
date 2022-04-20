@@ -75,7 +75,6 @@ public class Response {
                 response400();
             }
         } catch (IOException e){
-            e.printStackTrace();
         } finally {
             if (fis != null)
                 fis.close();
