@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Silver-Spork:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Silver_Spork_jar</output-path>
+    <root id="archive" name="Silver-Spork.jar">
+      <element id="module-output" name="Silver-Spork" />
+    </root>
+  </artifact>
+</component>
