@@ -3,6 +3,10 @@ COMP2322(CN) Project
 
 A small HTTP Server (Networking Project & Socket Programming)
 
+Java 16 + intellJ Idea + Postman
+
+![img](https://img.shields.io/badge/Build%20on%20Windows%2010-Pass-brightgreen) ![img](https://img.shields.io/badge/Build%20on%20Macos-Pass-brightgreen) ![img](https://img.shields.io/badge/Build%20on%20Centos%20Linux%207.9-Pass-brightgreen) 
+
 - Document: [https://guomaimang.github.io/note/cs/cn/java-socket-programming](https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming)
 - Demo: [http://cn2322.hanjiaming.com.cn:8082](http://cn2322.hanjiaming.com.cn:8082)
 
