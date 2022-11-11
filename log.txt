@@ -57,3 +57,20 @@ Socket: 3,	Date: Mon Apr 18 13:50:29 CST 2022, IP: /[0:0:0:0:0:0:0:1]:61478, Typ
 Socket: 4,	Date: Mon Apr 18 13:50:29 CST 2022, IP: /[0:0:0:0:0:0:0:1]:61479, Type: DELETE,	Url: /,	Server response: 400
 Socket: 3,	Date: Mon Apr 18 13:50:29 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:61478, close connection.
 Socket: 4,	Date: Mon Apr 18 13:50:39 CST 2022,	IP: /[0:0:0:0:0:0:0:1]:61479, close connection.
+-------------------
+Socket: 1,	Date: Fri Nov 11 18:55:55 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59921, comes in.
+Socket: 2,	Date: Fri Nov 11 18:55:55 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59922, comes in.
+Socket: 1,	Date: Fri Nov 11 18:55:55 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59921, Type: GET,	Url: /,	Server response: 200
+Socket: 1,	Date: Fri Nov 11 18:55:55 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59921, Type: GET,	Url: /logo.png,	Server response: 200
+Socket: 1,	Date: Fri Nov 11 18:55:55 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59921, Type: GET,	Url: /favicon.ico,	Server response: 404
+Socket: 2,	Date: Fri Nov 11 18:56:05 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59922, close connection.
+Socket: 1,	Date: Fri Nov 11 18:56:05 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59921, close connection.
+Socket: 3,	Date: Fri Nov 11 18:56:10 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59927, comes in.
+Socket: 4,	Date: Fri Nov 11 18:56:10 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59928, comes in.
+Socket: 3,	Date: Fri Nov 11 18:56:10 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59927, Type: GET,	Url: /demo.png,	Server response: 200
+Socket: 4,	Date: Fri Nov 11 18:56:20 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59928, close connection.
+Socket: 3,	Date: Fri Nov 11 18:56:20 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59927, close connection.
+Socket: 5,	Date: Fri Nov 11 18:57:15 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59959, comes in.
+Socket: 6,	Date: Fri Nov 11 18:57:15 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59960, comes in.
+Socket: 5,	Date: Fri Nov 11 18:57:25 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59959, close connection.
+Socket: 6,	Date: Fri Nov 11 18:57:25 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59960, close connection.
