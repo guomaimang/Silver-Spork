@@ -1,10 +1,11 @@
 import java.io.*;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author Han Jiaming
  * Only supports GET or HEAD of HTTP/1.1
- * For usage, reference and more info, please visit https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming
+ * For usage, reference and more info, please visit <a href="https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming">...</a>
  * Or check the project report
  */
 
@@ -21,63 +22,105 @@ public class Response {
     // send info stream to client via outputStream & Response 200
     public void sendInfo() throws IOException {
         File file;
+
+        if (!request.isLegal()){
+            response400();
+            return;
+        }
+        if (request.getType().equals("GET") || request.getType().equals("HEAD")){
+
+            // Pre Process: get file from website root
+            if (request.getUrl().equals("/")){
+                file = new File(HttpServer.serverRoot, request.getUrl() + "index.html");
+            }else{
+                file = new File(HttpServer.serverRoot,request.getUrl());
+            }
+
+            // Response 200 Static
+            if (file.exists()){
+                if (request.getLastModSince() != null && request.getLastModSince().equals(lastModTime(file))){
+                    response304();
+                } else if(request.getType().equals("GET")){
+                    response200Static(file);
+                }else {
+                    response200Head(file);
+                }
+            }
+            // Response 200 Dynamic
+            else if(isDynamic(request.getUrl())) {
+                response200Dynamic(request.getUrl());
+            }
+            // Response 404
+            else {
+                response404();
+            }
+        // Response 400
+        }else {
+            response400();
+        }
+
+    }
+
+    // Response 200
+    private void response200Static(File file){
+        response200Head(file);
+
         byte[] buf = new byte[1024];
-        FileInputStream fis = null;
-
-        try {
-            if (!request.isLegal()){
-                response400();
-                return;
+        try (FileInputStream fis = new FileInputStream(file)) {
+            // read file as byte and write file into dos as file.
+            int s;
+            while ((s = fis.read(buf)) != -1) {
+                outputStream.write(buf, 0, s);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void response200Head(File file){
+        int fileLength = (int) file.length();
+        PrintWriter responseInfo = new PrintWriter(outputStream);
+        responseInfo.println("HTTP/1.1 200 OK");
+        responseInfo.println("Server: Silver Spork by Hanjiaming");
+        responseInfo.println("Date: " + new Date());
+        responseInfo.println("Content-type: " + getContentType(file.getName()));
+        responseInfo.println("Content-length: " + fileLength);
+        responseInfo.println("Last-Modified: " + lastModTime(file));
+        responseInfo.println("Connection: keep-alive");
+        responseInfo.println("Keep-Alive: timeout=10, max=1000");
+        responseInfo.println("Expires: " + new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 14)));
+        responseInfo.println();
+        responseInfo.flush();
+        status = 200;
+    }
+    private void response200Dynamic(String url){
+        String file = "";
+        if (Objects.equals(url, "/trend.json")){
+            file = DynamicTextProcessor.trendJson();
+        }else if(Objects.equals(url, "/map.html")){
+            file = DynamicTextProcessor.map();
+        }
 
-            if (request.getType().equals("GET") || request.getType().equals("HEAD")){
+        PrintWriter responseInfo = new PrintWriter(outputStream);
+        responseInfo.println("HTTP/1.1 200 OK");
+        responseInfo.println("Server: Silver Spork by Hanjiaming");
+        responseInfo.println("Date: " + new Date());
+        responseInfo.println("Content-type: " + getContentType(url));
+        responseInfo.println("Content-length: " + file.length());
+        responseInfo.println("Connection: keep-alive");
+        responseInfo.println("Keep-Alive: timeout=10, max=1000");
+        responseInfo.println();
+        responseInfo.flush();
+        status = 200;
 
-                // get file from website root
-                if (request.getUrl().equals("/")){
-                    file = new File(HttpServer.serverRoot, "/index.html");
-                }else {
-                    file = new File(HttpServer.serverRoot,request.getUrl());
-                }
-
-                // Response 200
-                if (file.exists()){
-                    if (request.getLastModSince() != null && request.getLastModSince().equals(lastModTime(file))){
-                        response304();
-                    } else {
-                        int fileLength = (int) file.length();
-                        PrintWriter responseInfo = new PrintWriter(outputStream);
-                        responseInfo.println("HTTP/1.1 200 OK");
-                        responseInfo.println("Server: Silver Spork by Hanjiaming");
-                        responseInfo.println("Date: " + new Date());
-                        responseInfo.println("Content-type: " + getContentType(file.getName()));
-                        responseInfo.println("Content-length: " + fileLength);
-                        responseInfo.println("Last-Modified: " + lastModTime(file));
-                        responseInfo.println("Connection: keep-alive");
-                        responseInfo.println("Keep-Alive: timeout=10, max=1000");
-                        responseInfo.println("Expires: " + new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 14)));
-                        responseInfo.println();
-                        responseInfo.flush();
-                        status = 200;
-                    }
-                    // read file as byte and write file into dos as file.
-                    if (request.getType().equals("GET")){
-                        fis = new FileInputStream(file);
-                        int s;
-                        while ((s = fis.read(buf))!=-1){
-                            outputStream.write(buf,0,s);
-                        }
-                    }
-                }else {
-                    response404();
-                }
-
-            }else {
-                response400();
+        byte[] buf = new byte[1024];
+        try (InputStream fis = new ByteArrayInputStream(file.getBytes())) {
+            // read file as byte and write file into dos as file.
+            int s;
+            while ((s = fis.read(buf)) != -1) {
+                outputStream.write(buf, 0, s);
             }
-        } catch (IOException e){
-        } finally {
-            if (fis != null)
-                fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -161,5 +204,9 @@ public class Response {
         }else {
             return "text/plain";
         }
+    }
+
+    private boolean isDynamic(String url){
+        return Objects.equals(url, "/trend.json") || Objects.equals(url, "/map.html");
     }
 }

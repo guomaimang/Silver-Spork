@@ -74,3 +74,48 @@ Socket: 5,	Date: Fri Nov 11 18:57:15 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59959, com
 Socket: 6,	Date: Fri Nov 11 18:57:15 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59960, comes in.
 Socket: 5,	Date: Fri Nov 11 18:57:25 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59959, close connection.
 Socket: 6,	Date: Fri Nov 11 18:57:25 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:59960, close connection.
+-------------------
+Socket: 1,	Date: Tue Nov 15 16:36:52 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57943, comes in.
+Socket: 2,	Date: Tue Nov 15 16:36:52 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57944, comes in.
+Socket: 1,	Date: Tue Nov 15 16:36:52 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57943, Type: GET,	Url: /,	Server response: 200
+Socket: 1,	Date: Tue Nov 15 16:36:52 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57943, Type: GET,	Url: /logo.png,	Server response: 200
+Socket: 1,	Date: Tue Nov 15 16:36:52 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57943, Type: GET,	Url: /favicon.ico,	Server response: 404
+Socket: 1,	Date: Tue Nov 15 16:36:59 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57943, Type: GET,	Url: /demo.png,	Server response: 200
+Socket: 2,	Date: Tue Nov 15 16:37:02 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57944, close connection.
+Socket: 1,	Date: Tue Nov 15 16:37:09 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57943, close connection.
+Socket: 3,	Date: Tue Nov 15 16:37:22 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57954, comes in.
+Socket: 4,	Date: Tue Nov 15 16:37:22 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57955, comes in.
+Socket: 3,	Date: Tue Nov 15 16:37:22 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57954, Type: GET,	Url: /trend.json,	Server response: 200
+Socket: 3,	Date: Tue Nov 15 16:37:27 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57954, Type: null,	Url: null,	Server response: 400
+Socket: 5,	Date: Tue Nov 15 16:37:27 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57961, comes in.
+Socket: 3,	Date: Tue Nov 15 16:37:27 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57954, close connection.
+Socket: 4,	Date: Tue Nov 15 16:37:28 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57955, Type: GET,	Url: /,	Server response: 304
+Socket: 4,	Date: Tue Nov 15 16:37:28 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57955, Type: GET,	Url: /logo.png,	Server response: 304
+Socket: 5,	Date: Tue Nov 15 16:37:37 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57961, close connection.
+Socket: 4,	Date: Tue Nov 15 16:37:38 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57955, close connection.
+-------------------
+Socket: 1,	Date: Tue Nov 15 16:40:00 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58246, comes in.
+Socket: 2,	Date: Tue Nov 15 16:40:00 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58247, comes in.
+Socket: 1,	Date: Tue Nov 15 16:40:00 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58246, Type: GET,	Url: /trend.json,	Server response: 200
+Socket: 2,	Date: Tue Nov 15 16:40:10 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58247, close connection.
+Socket: 1,	Date: Tue Nov 15 16:40:10 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58246, close connection.
+Socket: 3,	Date: Tue Nov 15 16:40:17 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58252, comes in.
+Socket: 4,	Date: Tue Nov 15 16:40:17 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58253, comes in.
+Socket: 3,	Date: Tue Nov 15 16:40:17 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58252, Type: GET,	Url: /map.html,	Server response: 404
+Socket: 4,	Date: Tue Nov 15 16:40:27 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58253, close connection.
+Socket: 3,	Date: Tue Nov 15 16:40:27 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58252, close connection.
+-------------------
+Socket: 1,	Date: Tue Nov 15 16:40:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58263, comes in.
+Socket: 2,	Date: Tue Nov 15 16:40:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58264, comes in.
+Socket: 1,	Date: Tue Nov 15 16:40:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58263, Type: GET,	Url: /map.html,	Server response: 200
+Socket: 1,	Date: Tue Nov 15 16:40:37 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58263, Type: GET,	Url: /map.html,	Server response: 200
+Socket: 1,	Date: Tue Nov 15 16:40:37 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58263, Type: GET,	Url: /map.html,	Server response: 200
+Socket: 1,	Date: Tue Nov 15 16:40:39 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58263, Type: GET,	Url: /map.html,	Server response: 200
+Socket: 2,	Date: Tue Nov 15 16:40:45 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58264, close connection.
+Socket: 1,	Date: Tue Nov 15 16:40:49 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58263, close connection.
+-------------------
+Socket: 1,	Date: Tue Nov 15 16:42:26 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58307, comes in.
+Socket: 2,	Date: Tue Nov 15 16:42:26 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58308, comes in.
+Socket: 1,	Date: Tue Nov 15 16:42:26 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:58307, Type: GET,	Url: /map.html,	Server response: 200
+Socket: 2,	Date: Tue Nov 15 16:42:36 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58308, close connection.
+Socket: 1,	Date: Tue Nov 15 16:42:36 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:58307, close connection.
