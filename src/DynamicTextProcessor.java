@@ -3,8 +3,13 @@
 public class DynamicTextProcessor {
 
     public static String trendJson(){
-        String json = "[{\"id\":11, \"posterName\":\"hnss\", \"message\":\"Trip in England.\" }, { \"id\":8 , \"posterName\":\"guomaimang\", \"message\":\"A rainy day...\" }," +
-                "{ \"id\":3, \"posterName\":\"hongshu\", \"message\":\"This is my new Pet!\" }]";
+        String json = """
+                [
+                    { "id":"11", "time":"2022-11-11 19:07", "posterName":"hnss", "message":"Trip in England.", "location":"[43,11]" },
+                    { "id":"8" , "time":"2022-11-10 19:07", "posterName":"guomaimang", "message":"A rainy day...", "location":"[99,18]" },
+                    { "id":"3" , "time":"2022-08-11 03:07", "posterName":"hongshu", "message":"This is my new Pet!" , "location":"[-43,11]"},
+                ]
+                """;
         return json;
     }
 

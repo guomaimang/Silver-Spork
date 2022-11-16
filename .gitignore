@@ -32,3 +32,10 @@ hs_err_pid*
 .DS_Store
 src/.DS_Store
 log.txt
+public/.DS_Store
+*/.DS_Store
+
+public/Picture/*
+public/Thumbnails/*
+public/.DS_Store
+public/.DS_Store
