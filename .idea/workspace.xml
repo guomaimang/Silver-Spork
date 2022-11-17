@@ -7,42 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c403552-5439-4cc5-9354-e66556d03372" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Picture/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Picture/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Thumbnails/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DBController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicTextProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicTextProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +179,7 @@
       <workItem from="1668366202426" duration="183000" />
       <workItem from="1668449678788" duration="2359000" />
       <workItem from="1668494435982" duration="7889000" />
-      <workItem from="1668616025019" duration="641000" />
+      <workItem from="1668616025019" duration="1750000" />
     </task>
     <servers />
   </component>
