@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class DBController {
     static OracleConnection conn;
     static FileOutputStream stream;
-    
+
     static {
         try {
             stream = new FileOutputStream("SQL_File.txt");
@@ -17,7 +17,7 @@ public class DBController {
         } catch (Exception ignored) {
         }
     }
-    
+
     // get the latest post items, refer to 文档 从服务端获取动态的Json
     public ArrayList<ClientPostMeta> getTrends(){
         String cmd = String.format("SELECT * FROM `post` ORDER BY post_time DESC LIMIT 15");

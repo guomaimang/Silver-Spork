@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="GEM-Server">
+    <output-path>$PROJECT_DIR$/out/artifacts/GEM_Server</output-path>
+    <root id="archive" name="GEM-Server.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/comp4342/grp15/gem/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

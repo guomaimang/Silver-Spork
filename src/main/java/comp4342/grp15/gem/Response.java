@@ -262,14 +262,22 @@ public class Response {
 
     private String stdJsonFromResponse(Request request){
 
+        // 无JSON
         if (!request.getRequestInfoArr()[request.getRequestInfoArr().length - 1].endsWith("}")){
             return "";
         }
 
+        // 一行直接搞定
+        if (request.getRequestInfoArr()[0].startsWith("{")){
+            return request.getRequestInfoArr()[request.getRequestInfoArr().length - 1];
+        }
+
+        // 多行拼接
         StringBuilder json = new StringBuilder();
         for (int i = request.getRequestInfoArr().length - 1; i >= 0 ; i--) {
+            json.insert(0, " ");
             json.insert(0, request.getRequestInfoArr()[i]);
-            if (Objects.equals(request.getRequestInfoArr()[i], "{")){
+            if (Objects.equals(request.getRequestInfoArr()[i].charAt(0), '{')){
                 break;
             }
         }

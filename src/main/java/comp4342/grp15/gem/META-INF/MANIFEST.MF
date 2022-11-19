@@ -1,3 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: HttpServer
-
+Main-Class: comp4342.grp15.gem.HttpServer
