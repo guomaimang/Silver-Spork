@@ -16,6 +16,7 @@ public class UploadProcessor {
             Gson gson = new Gson();
             UploadMeta uploadMeta = gson.fromJson(jsonString, UploadMeta.class);
             // DBController.savePost(uploadMeta);
+            System.out.println(uploadMeta.getPicture());
         }catch (Exception e){
             return """
                     {"statue":"Fail", "commit":"Unknown Error", "code":"-1",
