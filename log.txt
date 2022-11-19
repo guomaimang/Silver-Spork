@@ -329,3 +329,21 @@ Socket: 1,	Date: Sat Nov 19 20:58:30 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:51887, Typ
 Socket: 1,	Date: Sat Nov 19 20:58:30 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:51887, close connection.
 Socket: 2,	Date: Sat Nov 19 20:58:30 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:51888, Type: GET,	Url: /trend.json,	Server response: 200
 Socket: 2,	Date: Sat Nov 19 20:58:40 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:51888, close connection.
+-------------------
+Socket: 1,	Date: Sat Nov 19 22:03:17 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54494, comes in.
+Socket: 2,	Date: Sat Nov 19 22:03:17 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54495, comes in.
+Socket: 1,	Date: Sat Nov 19 22:03:17 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54494, Type: GET,	Url: /index.html,	Server response: 200
+Socket: 2,	Date: Sat Nov 19 22:03:27 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:54495, close connection.
+Socket: 1,	Date: Sat Nov 19 22:03:27 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:54494, close connection.
+Socket: 3,	Date: Sat Nov 19 22:06:07 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54612, comes in.
+Socket: 4,	Date: Sat Nov 19 22:06:07 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54613, comes in.
+Socket: 3,	Date: Sat Nov 19 22:06:07 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54612, Type: GET,	Url: /trend.json,	Server response: 200
+Socket: 3,	Date: Sat Nov 19 22:06:17 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:54612, close connection.
+Socket: 4,	Date: Sat Nov 19 22:06:17 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:54613, close connection.
+Socket: 5,	Date: Sat Nov 19 22:07:48 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54687, comes in.
+Socket: 6,	Date: Sat Nov 19 22:07:48 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54688, comes in.
+Socket: 5,	Date: Sat Nov 19 22:07:48 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54687, Type: null,	Url: null,	Server response: 400
+Socket: 6,	Date: Sat Nov 19 22:07:48 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:54688, Type: GET,	Url: /trend.json,	Server response: 200
+Socket: 5,	Date: Sat Nov 19 22:07:48 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:54687, close connection.
+Socket: 6,	Date: Sat Nov 19 22:07:58 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:54688, close connection.
+-------------------

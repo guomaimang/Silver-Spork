@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: comp4342.grp15.gem.HttpServer
+Class-Path: gson-2.10.jar mysql-connector-java-8.0.29.jar protobuf-java-
+ 3.19.4.jar
+

@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Silver-Spork.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Silver_Spork_main_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Silver-Spork.main.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="Silver-Spork.main" />
+      </element>
+      <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.10" />
+      <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:8.0.29" />
+      <element id="library" level="project" name="Gradle: com.google.protobuf:protobuf-java:3.19.4" />
+    </root>
+  </artifact>
+</component>
