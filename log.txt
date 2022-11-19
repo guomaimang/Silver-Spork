@@ -199,3 +199,13 @@ Socket: 6,	Date: Sat Nov 19 17:16:06 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57979, com
 Socket: 5,	Date: Sat Nov 19 17:16:06 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:57978, Type: GET,	Url: /map.html,	Server response: 200
 Socket: 6,	Date: Sat Nov 19 17:16:16 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57979, close connection.
 Socket: 5,	Date: Sat Nov 19 17:16:16 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:57978, close connection.
+-------------------
+Socket: 1,	Date: Sat Nov 19 17:38:29 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59064, comes in.
+Socket: 2,	Date: Sat Nov 19 17:38:32 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59079, comes in.
+-------------------
+Socket: 1,	Date: Sat Nov 19 17:38:41 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, comes in.
+Socket: 2,	Date: Sat Nov 19 17:38:41 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59088, comes in.
+Socket: 1,	Date: Sat Nov 19 17:38:41 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Type: GET,	Url: /,	Server response: 304
+Socket: 1,	Date: Sat Nov 19 17:38:41 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Type: GET,	Url: /logo.png,	Server response: 304
+Socket: 1,	Date: Sat Nov 19 17:38:43 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Type: GET,	Url: /,	Server response: 304
+Socket: 1,	Date: Sat Nov 19 17:38:43 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Type: GET,	Url: /logo.png,	Server response: 304
