@@ -19,7 +19,7 @@ public class DBController {
     
     // get the latest post items, refer to 文档 从服务端获取动态的Json
     public ArrayList<ClientPostMeta> getTrends(){
-        String cmd = String.format("SELECT * FROM `post` ORDER BY post_time DESC");
+        String cmd = String.format("SELECT * FROM `post` ORDER BY post_time DESC LIMIT 15");
         ResultSet rs = execute(cmd);
         return null;
     }
