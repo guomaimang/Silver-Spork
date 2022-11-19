@@ -78,7 +78,7 @@ public class Response {
 
         switch (request.getUrl()) {
             case "/upload" ->
-                    file = UploadProcessor.getProcess(request.getRequestInfoArr()[request.getRequestInfoArr().length - 1]);
+                    file = UploadProcessor.getProcess(stdJsonFromResponse(request));
             case "/login" -> System.out.println("LOGIN");
             case "/signup" -> System.out.println("SIGNUP");
             default -> file = """
@@ -258,5 +258,22 @@ public class Response {
     // For Get, Check if request a dynamic resource
     private boolean isDynamic(String url){
         return Objects.equals(url, "/trend.json") || Objects.equals(url, "/map.html");
+    }
+
+    private String stdJsonFromResponse(Request request){
+
+        if (!request.getRequestInfoArr()[request.getRequestInfoArr().length - 1].endsWith("}")){
+            return "";
+        }
+
+        StringBuilder json = new StringBuilder();
+        for (int i = request.getRequestInfoArr().length - 1; i >= 0 ; i--) {
+            json.insert(0, request.getRequestInfoArr()[i]);
+            if (Objects.equals(request.getRequestInfoArr()[i], "{")){
+                break;
+            }
+        }
+
+        return json.toString();
     }
 }
