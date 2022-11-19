@@ -108,7 +108,6 @@ public class Response {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     // Response 200

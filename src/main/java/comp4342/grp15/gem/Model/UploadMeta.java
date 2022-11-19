@@ -1,7 +1,7 @@
 package comp4342.grp15.gem.Model;
 
 public class UploadMeta {
-    private String User;
+    private String user;
     private String identifier;
     private String message;
     private String location;
@@ -9,7 +9,7 @@ public class UploadMeta {
     private String picture;
 
     public UploadMeta(String user, String identifier, String message, String location, String picture) {
-        User = user;
+        this.user = user;
         this.identifier = identifier;
         this.message = message;
         this.location = location;
@@ -17,11 +17,11 @@ public class UploadMeta {
     }
 
     public String getUser() {
-        return User;
+        return user;
     }
 
     public void setUser(String user) {
-        User = user;
+        this.user = user;
     }
 
     public String getIdentifier() {

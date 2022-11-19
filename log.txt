@@ -210,3 +210,30 @@ Socket: 1,	Date: Sat Nov 19 17:38:41 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Typ
 Socket: 1,	Date: Sat Nov 19 17:38:43 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Type: GET,	Url: /,	Server response: 304
 Socket: 1,	Date: Sat Nov 19 17:38:43 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:59087, Type: GET,	Url: /logo.png,	Server response: 304
 -------------------
+Socket: 1,	Date: Sat Nov 19 20:02:51 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49421, comes in.
+Socket: 2,	Date: Sat Nov 19 20:02:51 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49422, comes in.
+Socket: 1,	Date: Sat Nov 19 20:02:51 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49421, Type: null,	Url: null,	Server response: 400
+Socket: 1,	Date: Sat Nov 19 20:02:51 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49421, close connection.
+Socket: 2,	Date: Sat Nov 19 20:02:51 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49422, Type: POST,	Url: /upload,	Server response: 200
+Socket: 2,	Date: Sat Nov 19 20:03:01 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49422, close connection.
+-------------------
+Socket: 1,	Date: Sat Nov 19 20:05:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49530, comes in.
+Socket: 2,	Date: Sat Nov 19 20:05:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49531, comes in.
+Socket: 1,	Date: Sat Nov 19 20:05:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49530, Type: null,	Url: null,	Server response: 400
+Socket: 1,	Date: Sat Nov 19 20:05:35 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49530, close connection.
+Socket: 2,	Date: Sat Nov 19 20:05:35 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49531, Type: POST,	Url: /upload,	Server response: 200
+Socket: 2,	Date: Sat Nov 19 20:05:45 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49531, close connection.
+-------------------
+Socket: 1,	Date: Sat Nov 19 20:08:10 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49635, comes in.
+Socket: 2,	Date: Sat Nov 19 20:08:10 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49636, comes in.
+Socket: 1,	Date: Sat Nov 19 20:08:10 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49635, Type: null,	Url: null,	Server response: 400
+Socket: 1,	Date: Sat Nov 19 20:08:10 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49635, close connection.
+Socket: 2,	Date: Sat Nov 19 20:08:11 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49636, Type: POST,	Url: /upload,	Server response: 200
+Socket: 2,	Date: Sat Nov 19 20:08:21 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49636, close connection.
+-------------------
+Socket: 1,	Date: Sat Nov 19 20:09:01 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49674, comes in.
+Socket: 2,	Date: Sat Nov 19 20:09:01 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49675, comes in.
+Socket: 1,	Date: Sat Nov 19 20:09:01 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49674, Type: null,	Url: null,	Server response: 400
+Socket: 1,	Date: Sat Nov 19 20:09:01 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49674, close connection.
+Socket: 2,	Date: Sat Nov 19 20:09:01 HKT 2022, IP: /[0:0:0:0:0:0:0:1]:49675, Type: POST,	Url: /upload,	Server response: 200
+Socket: 2,	Date: Sat Nov 19 20:09:11 HKT 2022,	IP: /[0:0:0:0:0:0:0:1]:49675, close connection.
