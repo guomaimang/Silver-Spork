@@ -3,7 +3,7 @@ import java.util.Objects;
 /**
  * @author Han Jiaming
  * Only supports GET or HEAD of HTTP/1.1
- * For usage, reference and more info, please visit https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming
+ * For usage, reference and more info, please visit <a href="https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming">...</a>
  * Or check the project report
  */
 
@@ -13,10 +13,12 @@ public class Request{
     private String url;
     private String lastModSince;
 
+    private final String[] requestInfoArr;
+
     public Request(String requestInfo){
 
         // parse info to http attributes
-        String[] requestInfoArr = requestInfo.split("\\s+");
+        requestInfoArr = requestInfo.split("\\s+");
         // parse legal type url
         if (requestInfoArr.length >= 3){
             legal = true;
@@ -35,7 +37,6 @@ public class Request{
                 }
             }
         }
-
     }
 
     // bean methods
@@ -50,5 +51,8 @@ public class Request{
     }
     public String getLastModSince() {
         return lastModSince;
+    }
+    public String[] getRequestInfoArr() {
+        return requestInfoArr;
     }
 }

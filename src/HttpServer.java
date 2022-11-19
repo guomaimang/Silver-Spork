@@ -1,3 +1,5 @@
+import Service.Logger;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -70,7 +72,7 @@ class Worker implements Runnable{
                 // process request and response
                 Request request = new Request(parse(dis));
                 Response response = new Response(request,dos);
-                response.sendInfo();
+                response.process();
 
                 // dos flush
                 dos.flush();

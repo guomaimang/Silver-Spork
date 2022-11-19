@@ -1,3 +1,6 @@
+import Service.DynamicTextProcessor;
+import Service.UploadProcessor;
+
 import java.io.*;
 import java.util.Date;
 import java.util.Objects;
@@ -20,43 +23,88 @@ public class Response {
     }
 
     // send info stream to client via outputStream & Response 200
-    public void sendInfo() throws IOException {
-        File file;
+    public void process() throws IOException {
 
         if (!request.isLegal()){
             response400();
             return;
         }
         if (request.getType().equals("GET") || request.getType().equals("HEAD")){
-
-            // Pre Process: get file from website root
-            if (request.getUrl().equals("/")){
-                file = new File(HttpServer.serverRoot, request.getUrl() + "index.html");
-            }else{
-                file = new File(HttpServer.serverRoot,request.getUrl());
-            }
-
-            // Response 200 Static
-            if (file.exists()){
-                if (request.getLastModSince() != null && request.getLastModSince().equals(lastModTime(file))){
-                    response304();
-                } else if(request.getType().equals("GET")){
-                    response200Static(file);
-                }else {
-                    response200Head(file);
-                }
-            }
-            // Response 200 Dynamic
-            else if(isDynamic(request.getUrl())) {
-                response200Dynamic(request.getUrl());
-            }
-            // Response 404
-            else {
-                response404();
-            }
-        // Response 400
-        }else {
+            processGet();
+        }else if(request.getType().equals("POST")){
+            processPost();
+        }
+        else{
             response400();
+        }
+
+    }
+
+    private void processGet() throws IOException{
+        File file;
+
+        // Pre Process: get file from website root
+        if (request.getUrl().endsWith("/")){
+            file = new File(HttpServer.serverRoot, request.getUrl() + "index.html");
+        }else{
+            file = new File(HttpServer.serverRoot,request.getUrl());
+        }
+
+        // Response 200 Static
+        if (file.exists()){
+            if (request.getLastModSince() != null && request.getLastModSince().equals(lastModTime(file))){
+                response304();
+            } else if(request.getType().equals("GET")){
+                response200Static(file);
+            }else {
+                response200Head(file);
+            }
+        }
+        // Response 200 Dynamic
+        else if(isDynamic(request.getUrl())) {
+            response200Dynamic(request.getUrl());
+        }
+        // Response 404
+        else {
+            response404();
+        }
+
+    }
+
+    private void processPost(){
+        String file = "";
+
+        switch (request.getUrl()) {
+            case "/upload" ->
+                    file = UploadProcessor.getProcess(request.getRequestInfoArr()[request.getRequestInfoArr().length - 1]);
+            case "/login" -> System.out.println("LOGIN");
+            case "/signup" -> System.out.println("SIGNUP");
+            default -> file = """
+                    {"statue":"Fail", "commit":"Bad Request", "code":"-1",}
+                    """;
+        }
+
+        PrintWriter responseInfo = new PrintWriter(outputStream);
+        responseInfo.println("HTTP/1.1 200 OK");
+        responseInfo.println("Server: Silver Spork by Hanjiaming");
+        responseInfo.println("Date: " + new Date());
+        responseInfo.println("Content-type: " + getContentType("re.json"));
+        responseInfo.println("Content-length: " + file.length());
+        responseInfo.println("Connection: keep-alive");
+        responseInfo.println("Keep-Alive: timeout=10, max=1000");
+        responseInfo.println();
+        responseInfo.flush();
+        status = 200;
+
+        byte[] buf = new byte[1024];
+        try (InputStream fis = new ByteArrayInputStream(file.getBytes())) {
+            // read file as byte and write file into dos as file.
+            int s;
+            while ((s = fis.read(buf)) != -1) {
+                outputStream.write(buf, 0, s);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
@@ -206,6 +254,7 @@ public class Response {
         }
     }
 
+    // For Get, Check if request a dynamic resource
     private boolean isDynamic(String url){
         return Objects.equals(url, "/trend.json") || Objects.equals(url, "/map.html");
     }

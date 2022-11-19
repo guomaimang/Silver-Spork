@@ -1,9 +1,11 @@
+package Service;
+
 import java.io.*;
 
 /**
  * @author Han Jiaming
  * Only supports GET or HEAD of HTTP/1.1
- * For usage, reference and more info, please visit https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming
+ * For usage, reference and more info, please visit <a href="https://guomaimang.github.io/note/cs/cn/Java-Socket-Programming">...</a>
  * Or check the project report
  */
 
